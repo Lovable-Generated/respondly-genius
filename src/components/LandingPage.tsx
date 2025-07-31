@@ -195,14 +195,14 @@ const LandingPage = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-ai-blue to-ai-purple rounded-lg flex items-center justify-center">
                 <Brain className="h-5 w-5 text-white" />
               </div>
-              <span className="text-xl font-bold">AutoReply AI</span>
+              <span className="text-xl font-bold">Respondly Genius</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
               <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
               <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</a>
-              <Button variant="outline">Login</Button>
-              <Button variant="gradient">Start Free Trial</Button>
+              <Button variant="outline" onClick={() => window.location.href = '/login'}>Login</Button>
+              <Button variant="gradient" onClick={() => window.location.href = '/signup'}>Start Free Trial</Button>
             </div>
           </div>
         </div>
@@ -355,7 +355,7 @@ const LandingPage = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to transform your email workflow?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses already using AutoReply AI to provide faster, smarter customer service.
+            Join hundreds of businesses already using Respondly Genius to provide faster, smarter customer service.
           </p>
           <Button variant="hero" size="lg" className="text-lg px-12 py-4">
             Start Your Free Trial Today
@@ -375,7 +375,7 @@ const LandingPage = () => {
                 <div className="w-8 h-8 bg-gradient-to-r from-ai-blue to-ai-purple rounded-lg flex items-center justify-center">
                   <Brain className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold">AutoReply AI</span>
+                <span className="text-xl font-bold">Respondly Genius</span>
               </div>
               <p className="text-muted-foreground">
                 Intelligent email automation for modern businesses.

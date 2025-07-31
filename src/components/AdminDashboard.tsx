@@ -78,7 +78,7 @@ const AdminDashboard = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Admin Dashboard</h1>
-                <p className="text-sm text-muted-foreground">AutoReply AI Management Console</p>
+                <p className="text-sm text-muted-foreground">Respondly Genius Management Console</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">

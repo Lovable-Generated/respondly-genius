@@ -12,6 +12,10 @@ import AdminDashboard from "./components/AdminDashboard";
 import { EmailInbox } from "./components/pages/EmailInbox";
 import { Analytics } from "./components/pages/Analytics";
 import { Subscription } from "./components/pages/Subscription";
+import { AISettings } from "./components/pages/AISettings";
+import { EmailTemplates } from "./components/pages/EmailTemplates";
+import { TeamManagement } from "./components/pages/TeamManagement";
+import { Integrations } from "./components/pages/Integrations";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/emails/inbox" element={<EmailInbox />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/subscription" element={<Subscription />} />
+          <Route path="/ai/settings" element={<AISettings />} />
+          <Route path="/templates" element={<EmailTemplates />} />
+          <Route path="/team" element={<TeamManagement />} />
+          <Route path="/integrations" element={<Integrations />} />
           <Route path="/admin" element={<AdminDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

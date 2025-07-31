@@ -124,8 +124,69 @@ const LandingPage = () => {
     }
   ];
 
+  useEffect(() => {
+    // Load particles.js script
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+    script.onload = () => {
+      if (window.particlesJS) {
+        window.particlesJS('particles-js', {
+          particles: {
+            number: { value: 100, density: { enable: true, value_area: 800 } },
+            color: { value: ['#6366f1', '#8b5cf6', '#3b82f6', '#06b6d4'] },
+            shape: { type: 'circle' },
+            opacity: { value: 0.4, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
+            size: { value: 2.5, random: true, anim: { enable: true, speed: 2, size_min: 0.5, sync: false } },
+            line_linked: { 
+              enable: true, 
+              distance: 150, 
+              color: '#6366f1', 
+              opacity: 0.3, 
+              width: 1 
+            },
+            move: { 
+              enable: true, 
+              speed: 3, 
+              direction: 'none', 
+              random: true, 
+              straight: false, 
+              out_mode: 'out', 
+              bounce: false 
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: { 
+              onhover: { enable: true, mode: 'grab' }, 
+              onclick: { enable: true, mode: 'push' }, 
+              resize: true 
+            },
+            modes: { 
+              grab: { distance: 140, line_linked: { opacity: 0.5 } }, 
+              bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, 
+              repulse: { distance: 200, duration: 0.4 }, 
+              push: { particles_nb: 4 }, 
+              remove: { particles_nb: 2 } 
+            }
+          },
+          retina_detect: true
+        });
+      }
+    };
+    document.head.appendChild(script);
+    
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Particles Background */}
+      <div id="particles-js" className="absolute inset-0 z-0"></div>
+      
+      {/* Content with higher z-index */}
+      <div className="relative z-10">
       {/* Navigation */}
       <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -353,6 +414,7 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };

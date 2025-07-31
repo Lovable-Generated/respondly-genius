@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Zap, Globe, Shield, BarChart3, Mail, Brain, Users, Star } from "lucide-react";
+import { Check, Zap, Globe, Shield, BarChart3, Mail, Brain, Users, Star, Menu, X, ArrowRight, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 declare global {
   interface Window {
@@ -11,6 +12,9 @@ declare global {
 }
 
 const LandingPage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  
   const features = [
     {
       icon: <Brain className="h-8 w-8 text-ai-blue" />,
@@ -187,29 +191,82 @@ const LandingPage = () => {
       
       {/* Content with higher z-index */}
       <div className="relative z-10">
-      {/* Navigation */}
-      <nav className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* Modern Navigation Header */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-ai-blue to-ai-purple rounded-lg flex items-center justify-center">
-                <Brain className="h-5 w-5 text-white" />
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => navigate('/')}>
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-ai-blue via-ai-purple to-ai-blue rounded-xl flex items-center justify-center shadow-lg shadow-ai-blue/20">
+                  <Mail className="h-6 w-6 text-white" />
+                </div>
+                <Sparkles className="absolute -top-1 -right-1 h-4 w-4 text-ai-purple animate-pulse" />
               </div>
-              <span className="text-xl font-bold">Respondly Genius</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold bg-gradient-to-r from-ai-blue to-ai-purple bg-clip-text text-transparent">Respondly</span>
+                <span className="text-xs text-muted-foreground -mt-1">AI Email Automation</span>
+              </div>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a>
-              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</a>
-              <a href="#testimonials" className="text-muted-foreground hover:text-foreground transition-colors">Testimonials</a>
-              <Button variant="outline" onClick={() => window.location.href = '/login'}>Login</Button>
-              <Button variant="gradient" onClick={() => window.location.href = '/signup'}>Start Free Trial</Button>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center space-x-8">
+              <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:scale-105">Features</a>
+              <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:scale-105">How it Works</a>
+              <a href="#integrations" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:scale-105">Integrations</a>
+              <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:scale-105">Pricing</a>
+              <a href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all hover:scale-105">Testimonials</a>
             </div>
+            
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Button 
+                variant="ghost" 
+                onClick={() => navigate('/login')}
+                className="hover:bg-white/10"
+              >
+                Sign In
+              </Button>
+              <Button 
+                variant="default"
+                onClick={() => navigate('/signup')}
+                className="bg-gradient-to-r from-ai-blue to-ai-purple hover:from-ai-blue/90 hover:to-ai-purple/90 text-white shadow-lg shadow-ai-blue/20"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+            
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
           </div>
         </div>
+        
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl">
+            <div className="container mx-auto px-4 py-4 space-y-2">
+              <a href="#features" className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">Features</a>
+              <a href="#how-it-works" className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">How it Works</a>
+              <a href="#integrations" className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">Integrations</a>
+              <a href="#pricing" className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">Pricing</a>
+              <a href="#testimonials" className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground">Testimonials</a>
+              <div className="pt-4 space-y-2">
+                <Button variant="outline" className="w-full" onClick={() => navigate('/login')}>Sign In</Button>
+                <Button className="w-full bg-gradient-to-r from-ai-blue to-ai-purple" onClick={() => navigate('/signup')}>Start Free Trial</Button>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-32 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-32 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto text-center">
           <Badge variant="secondary" className="mb-6">
             🚀 Now with GPT-4 Integration

@@ -8,8 +8,8 @@ import { Brain, Mail, Lock, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("demo@respondly.com");
+  const [password, setPassword] = useState("demo123");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 

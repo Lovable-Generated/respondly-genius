@@ -1,4 +1,3 @@
-import { DashboardLayout } from "@/components/layout/DashboardLayout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -221,8 +220,7 @@ export function AutoReplyRules() {
   const avgSuccessRate = totalTriggers > 0 ? (totalSuccessful / totalTriggers) * 100 : 0;
 
   return (
-    <DashboardLayout>
-      <div className="space-y-6">
+    <div className="space-y-6">
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
@@ -529,6 +527,5 @@ export function AutoReplyRules() {
           </CardContent>
         </Card>
       </div>
-    </DashboardLayout>
   );
 }

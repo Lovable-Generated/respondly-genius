@@ -108,7 +108,7 @@ export function RevenueImpact() {
                     ROI: 450%
                   </div>
                 </div>
-                <Target className="h-8 w-8 text-ai-blue" />
+                <Target className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -123,7 +123,7 @@ export function RevenueImpact() {
                     -85.6% vs manual
                   </div>
                 </div>
-                <Clock className="h-8 w-8 text-ai-purple" />
+                <Clock className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -160,9 +160,9 @@ export function RevenueImpact() {
                 <Line
                   type="monotone"
                   dataKey="revenue"
-                  stroke="#3b82f6"
+                  stroke="#10b981"
                   strokeWidth={3}
-                  dot={{ fill: "#3b82f6", strokeWidth: 2, r: 4 }}
+                  dot={{ fill: "#10b981", strokeWidth: 2, r: 4 }}
                   name="Daily Revenue (NOK)"
                 />
                 <Line
@@ -205,7 +205,7 @@ export function RevenueImpact() {
                         className={`${
                           metric.impact === "high" 
                             ? "bg-green-100 text-green-800" 
-                            : "bg-blue-100 text-blue-800"
+                            : "bg-green-100 text-green-800"
                         }`}
                       >
                         {metric.improvement}
@@ -260,7 +260,7 @@ export function RevenueImpact() {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div 
-                        className="bg-gradient-to-r from-ai-blue to-ai-green h-2 rounded-full"
+                        className="bg-gradient-to-r from-ai-green to-ai-green h-2 rounded-full"
                         style={{ width: `${(industry.ourPerformance / 5) * 100}%` }}
                       ></div>
                     </div>
@@ -279,8 +279,8 @@ export function RevenueImpact() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="text-center p-6 border rounded-lg bg-blue-50/50">
-                <div className="text-3xl font-bold text-blue-600 mb-2">
+              <div className="text-center p-6 border rounded-lg bg-green-50/50">
+                <div className="text-3xl font-bold text-green-600 mb-2">
                   {((totalAnnualSavings - 15588) / 15588 * 100).toFixed(0)}%
                 </div>
                 <div className="text-sm text-muted-foreground">Annual ROI</div>
@@ -299,8 +299,8 @@ export function RevenueImpact() {
                 </div>
               </div>
               
-              <div className="text-center p-6 border rounded-lg bg-purple-50/50">
-                <div className="text-3xl font-bold text-purple-600 mb-2">
+              <div className="text-center p-6 border rounded-lg bg-emerald-50/50">
+                <div className="text-3xl font-bold text-emerald-600 mb-2">
                   {(totalAnnualSavings / 1000).toFixed(0)}K NOK
                 </div>
                 <div className="text-sm text-muted-foreground">Annual Value</div>
@@ -343,22 +343,22 @@ export function RevenueImpact() {
               </div>
               
               <div className="space-y-4">
-                <h4 className="font-semibold text-blue-600">Financial Benefits</h4>
+                <h4 className="font-semibold text-green-600">Financial Benefits</h4>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center space-x-2">
-                    <DollarSign className="h-4 w-4 text-blue-500" />
+                    <DollarSign className="h-4 w-4 text-green-500" />
                     <span>Monthly savings: {totalMonthlySavings.toLocaleString()} NOK</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <DollarSign className="h-4 w-4 text-blue-500" />
+                    <DollarSign className="h-4 w-4 text-green-500" />
                     <span>Annual projection: {(totalAnnualSavings / 1000).toFixed(0)}K NOK</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <DollarSign className="h-4 w-4 text-blue-500" />
+                    <DollarSign className="h-4 w-4 text-green-500" />
                     <span>ROI: 450% annually</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <DollarSign className="h-4 w-4 text-blue-500" />
+                    <DollarSign className="h-4 w-4 text-green-500" />
                     <span>Payback period: 2.3 months</span>
                   </li>
                 </ul>

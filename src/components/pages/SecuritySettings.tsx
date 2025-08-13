@@ -162,7 +162,7 @@ export function SecuritySettings() {
       case "error":
         return "bg-red-100 text-red-800";
       default:
-        return "bg-blue-100 text-blue-800";
+        return "bg-green-100 text-green-800";
     }
   };
 
@@ -206,7 +206,7 @@ export function SecuritySettings() {
                   <p className="text-sm text-muted-foreground">2FA Status</p>
                   <p className="text-2xl font-bold text-green-600">Enabled</p>
                 </div>
-                <Smartphone className="h-8 w-8 text-ai-blue" />
+                <Smartphone className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -217,7 +217,7 @@ export function SecuritySettings() {
                   <p className="text-sm text-muted-foreground">Active Sessions</p>
                   <p className="text-2xl font-bold">{activeSessions.length}</p>
                 </div>
-                <Globe className="h-8 w-8 text-ai-purple" />
+                <Globe className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -406,7 +406,7 @@ export function SecuritySettings() {
                   {activeSessions.map((session) => (
                     <div key={session.id} className="flex items-center justify-between p-4 border rounded-lg">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center text-white">
+                        <div className="w-12 h-12 bg-gradient-to-br from-ai-green to-ai-emerald rounded-lg flex items-center justify-center text-white">
                           <Globe className="h-6 w-6" />
                         </div>
                         <div>
@@ -698,7 +698,7 @@ export function SecuritySettings() {
                   
                   <div className="p-4 border rounded-lg">
                     <div className="flex items-center space-x-3 mb-2">
-                      <Shield className="h-6 w-6 text-blue-500" />
+                      <Shield className="h-6 w-6 text-green-500" />
                       <h4 className="font-medium">ISO 27001</h4>
                     </div>
                     <p className="text-sm text-muted-foreground">
@@ -708,7 +708,7 @@ export function SecuritySettings() {
                   
                   <div className="p-4 border rounded-lg">
                     <div className="flex items-center space-x-3 mb-2">
-                      <Lock className="h-6 w-6 text-purple-500" />
+                      <Lock className="h-6 w-6 text-emerald-500" />
                       <h4 className="font-medium">SOC 2 Type II</h4>
                     </div>
                     <p className="text-sm text-muted-foreground">

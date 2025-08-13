@@ -128,7 +128,7 @@ export function APIKeys() {
       case "production":
         return "bg-red-100 text-red-800";
       case "development":
-        return "bg-blue-100 text-blue-800";
+        return "bg-green-100 text-green-800";
       case "staging":
         return "bg-yellow-100 text-yellow-800";
       default:
@@ -224,7 +224,7 @@ export function APIKeys() {
                   <p className="text-sm text-muted-foreground">Active Keys</p>
                   <p className="text-2xl font-bold">{activeKeys}</p>
                 </div>
-                <Key className="h-8 w-8 text-ai-blue" />
+                <Key className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -235,7 +235,7 @@ export function APIKeys() {
                   <p className="text-sm text-muted-foreground">Total Requests</p>
                   <p className="text-2xl font-bold">{totalRequests.toLocaleString()}</p>
                 </div>
-                <Activity className="h-8 w-8 text-ai-purple" />
+                <Activity className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -284,7 +284,7 @@ export function APIKeys() {
                 <div key={apiKey.id} className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center">
+                      <div className="w-10 h-10 bg-gradient-to-br from-ai-green to-ai-emerald rounded-lg flex items-center justify-center">
                         <Key className="h-5 w-5 text-white" />
                       </div>
                       <div>
@@ -385,7 +385,7 @@ export function APIKeys() {
                   </div>
                   <div className="flex items-center space-x-6 text-sm">
                     <div className="text-center">
-                      <div className="font-bold text-ai-blue">{stat.requests.toLocaleString()}</div>
+                      <div className="font-bold text-ai-green">{stat.requests.toLocaleString()}</div>
                       <div className="text-muted-foreground">Requests</div>
                     </div>
                     <div className="text-center">

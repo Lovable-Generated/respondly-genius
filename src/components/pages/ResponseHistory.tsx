@@ -216,9 +216,9 @@ export function ResponseHistory() {
                 <Line
                   type="monotone"
                   dataKey="responses"
-                  stroke="#3b82f6"
+                  stroke="#10b981"
                   strokeWidth={3}
-                  dot={{ fill: "#3b82f6", strokeWidth: 2, r: 4 }}
+                  dot={{ fill: "#10b981", strokeWidth: 2, r: 4 }}
                   name="Total Responses"
                 />
                 <Line

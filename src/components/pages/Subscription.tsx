@@ -86,7 +86,7 @@ const plans = [
       teamMembers: 10
     },
     popular: true,
-    color: "border-ai-blue shadow-lg"
+    color: "border-ai-green shadow-lg"
   },
   {
     name: "Enterprise",
@@ -113,7 +113,7 @@ const plans = [
       teamMembers: "Unlimited"
     },
     popular: false,
-    color: "border-ai-purple"
+    color: "border-ai-emerald"
   }
 ];
 
@@ -175,7 +175,7 @@ export function Subscription() {
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="flex items-center gap-2">
-                    <Crown className="h-5 w-5 text-ai-blue" />
+                    <Crown className="h-5 w-5 text-ai-green" />
                     Current Plan: {currentPlan.name}
                   </CardTitle>
                   <CardDescription>Active since January 15, 2024</CardDescription>
@@ -250,7 +250,7 @@ export function Subscription() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-ai-blue" />
+                    <Mail className="h-5 w-5 text-ai-green" />
                     <div>
                       <p className="font-medium">Email Processing</p>
                       <p className="text-sm text-muted-foreground">AI-powered responses</p>
@@ -265,7 +265,7 @@ export function Subscription() {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <Bot className="h-5 w-5 text-ai-purple" />
+                    <Bot className="h-5 w-5 text-ai-emerald" />
                     <div>
                       <p className="font-medium">API Calls</p>
                       <p className="text-sm text-muted-foreground">GPT-4 requests</p>
@@ -325,7 +325,7 @@ export function Subscription() {
               {plans.map((plan, index) => (
                 <div key={index} className={`border-2 rounded-lg p-6 relative ${plan.color} ${plan.popular ? 'scale-105' : ''}`}>
                   {plan.popular && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-ai-blue">
+                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-ai-green">
                       Most Popular
                     </Badge>
                   )}
@@ -376,7 +376,7 @@ export function Subscription() {
               {invoices.map((invoice, index) => (
                 <div key={index} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition-colors">
                   <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-ai-green to-ai-emerald rounded-lg flex items-center justify-center">
                       <CreditCard className="h-5 w-5 text-white" />
                     </div>
                     <div>
@@ -410,7 +410,7 @@ export function Subscription() {
           <CardContent>
             <div className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-8 bg-gradient-to-r from-blue-600 to-blue-800 rounded flex items-center justify-center text-white text-xs font-bold">
+                <div className="w-12 h-8 bg-gradient-to-r from-green-600 to-green-800 rounded flex items-center justify-center text-white text-xs font-bold">
                   VISA
                 </div>
                 <div>

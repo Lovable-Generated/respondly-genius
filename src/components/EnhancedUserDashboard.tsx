@@ -36,9 +36,9 @@ const responseData = [
 ];
 
 const languageData = [
-  { name: "English", value: 45, color: "#3b82f6" },
-  { name: "Norwegian", value: 32, color: "#8b5cf6" },
-  { name: "Swedish", value: 15, color: "#06b6d4" },
+  { name: "English", value: 45, color: "#10b981" },
+  { name: "Norwegian", value: 32, color: "#16a34a" },
+  { name: "Swedish", value: 15, color: "#059669" },
   { name: "Danish", value: 8, color: "#10b981" },
 ];
 
@@ -187,8 +187,8 @@ export function EnhancedUserDashboard() {
                     type="monotone"
                     dataKey="emails"
                     stackId="1"
-                    stroke="#3b82f6"
-                    fill="#3b82f6"
+                    stroke="#10b981"
+                    fill="#10b981"
                     fillOpacity={0.6}
                     name="Emails Received"
                   />
@@ -196,8 +196,8 @@ export function EnhancedUserDashboard() {
                     type="monotone"
                     dataKey="responses"
                     stackId="2"
-                    stroke="#8b5cf6"
-                    fill="#8b5cf6"
+                    stroke="#16a34a"
+                    fill="#16a34a"
                     fillOpacity={0.6}
                     name="AI Responses"
                   />

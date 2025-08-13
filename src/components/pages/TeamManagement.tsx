@@ -114,13 +114,13 @@ const roles = [
     name: "Owner",
     description: "Full access to all features and settings",
     permissions: ["All permissions"],
-    color: "bg-purple-100 text-purple-800"
+    color: "bg-emerald-100 text-emerald-800"
   },
   {
     name: "Admin",
     description: "Manage team, templates, and most settings",
     permissions: ["Manage team", "Manage templates", "View analytics", "Manage AI settings"],
-    color: "bg-blue-100 text-blue-800"
+    color: "bg-green-100 text-green-800"
   },
   {
     name: "Member",
@@ -179,9 +179,9 @@ export function TeamManagement() {
   const getRoleIcon = (role: string) => {
     switch (role) {
       case "Owner":
-        return <Crown className="h-4 w-4 text-purple-600" />;
+        return <Crown className="h-4 w-4 text-emerald-600" />;
       case "Admin":
-        return <Shield className="h-4 w-4 text-blue-600" />;
+        return <Shield className="h-4 w-4 text-green-600" />;
       case "Member":
         return <Users className="h-4 w-4 text-green-600" />;
       default:
@@ -258,7 +258,7 @@ export function TeamManagement() {
                   <p className="text-sm text-muted-foreground">Total Members</p>
                   <p className="text-2xl font-bold">{teamMembers.length}</p>
                 </div>
-                <Users className="h-8 w-8 text-ai-blue" />
+                <Users className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -291,7 +291,7 @@ export function TeamManagement() {
                   <p className="text-sm text-muted-foreground">Emails Handled</p>
                   <p className="text-2xl font-bold">{teamMembers.reduce((sum, m) => sum + m.emailsHandled, 0)}</p>
                 </div>
-                <Mail className="h-8 w-8 text-ai-purple" />
+                <Mail className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -360,7 +360,7 @@ export function TeamManagement() {
                       <div className="flex items-center space-x-4">
                         <Avatar className="h-12 w-12">
                           <AvatarImage src={member.avatar} alt={member.name} />
-                          <AvatarFallback className="bg-gradient-to-br from-ai-blue to-ai-purple text-white">
+                          <AvatarFallback className="bg-gradient-to-br from-ai-green to-ai-emerald text-white">
                             {member.name.split(' ').map(n => n[0]).join('')}
                           </AvatarFallback>
                         </Avatar>

@@ -128,7 +128,7 @@ export function EmailAccountsSettings() {
       case "error":
         return <XCircle className="h-4 w-4 text-red-500" />;
       case "syncing":
-        return <RefreshCw className="h-4 w-4 text-blue-500 animate-spin" />;
+        return <RefreshCw className="h-4 w-4 text-green-500 animate-spin" />;
       default:
         return <AlertCircle className="h-4 w-4 text-gray-500" />;
     }
@@ -141,7 +141,7 @@ export function EmailAccountsSettings() {
       case "error":
         return "bg-red-100 text-red-800";
       case "syncing":
-        return "bg-blue-100 text-blue-800";
+        return "bg-green-100 text-green-800";
       default:
         return "bg-gray-100 text-gray-800";
     }
@@ -276,7 +276,7 @@ export function EmailAccountsSettings() {
                   <p className="text-sm text-muted-foreground">Connected Accounts</p>
                   <p className="text-2xl font-bold">{emailAccounts.length}</p>
                 </div>
-                <Mail className="h-8 w-8 text-ai-blue" />
+                <Mail className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -298,7 +298,7 @@ export function EmailAccountsSettings() {
                   <p className="text-sm text-muted-foreground">Total Emails</p>
                   <p className="text-2xl font-bold">{emailAccounts.reduce((sum, acc) => sum + acc.totalEmails, 0)}</p>
                 </div>
-                <Globe className="h-8 w-8 text-ai-purple" />
+                <Globe className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -327,7 +327,7 @@ export function EmailAccountsSettings() {
                 <div key={account.id} className="border rounded-lg p-4 hover:bg-muted/50 transition-colors">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center text-white">
+                      <div className="w-12 h-12 bg-gradient-to-br from-ai-green to-ai-emerald rounded-lg flex items-center justify-center text-white">
                         <Mail className="h-6 w-6" />
                       </div>
                       <div>

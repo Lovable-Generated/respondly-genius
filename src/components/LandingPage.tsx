@@ -137,14 +137,14 @@ const LandingPage = () => {
         window.particlesJS('particles-js', {
           particles: {
             number: { value: 100, density: { enable: true, value_area: 800 } },
-            color: { value: ['#6366f1', '#8b5cf6', '#3b82f6', '#06b6d4'] },
+            color: { value: ['#22c55e', '#16a34a', '#10b981', '#059669'] },
             shape: { type: 'circle' },
             opacity: { value: 0.4, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
             size: { value: 2.5, random: true, anim: { enable: true, speed: 2, size_min: 0.5, sync: false } },
             line_linked: { 
               enable: true, 
               distance: 150, 
-              color: '#6366f1', 
+              color: '#22c55e', 
               opacity: 0.3, 
               width: 1 
             },

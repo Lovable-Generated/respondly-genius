@@ -164,7 +164,7 @@ export function EmailInbox() {
                 <p className="text-sm text-muted-foreground">Unread</p>
                 <p className="text-2xl font-bold">23</p>
               </div>
-              <Mail className="h-8 w-8 text-ai-blue" />
+              <Mail className="h-8 w-8 text-ai-green" />
             </div>
           </CardContent>
         </Card>
@@ -175,7 +175,7 @@ export function EmailInbox() {
                 <p className="text-sm text-muted-foreground">AI Responded</p>
                 <p className="text-2xl font-bold">156</p>
               </div>
-              <Bot className="h-8 w-8 text-ai-purple" />
+              <Bot className="h-8 w-8 text-ai-emerald" />
             </div>
           </CardContent>
         </Card>
@@ -236,7 +236,7 @@ export function EmailInbox() {
                 <DialogTrigger asChild>
                   <div
                     className={`p-4 border rounded-lg cursor-pointer hover:bg-muted/50 transition-colors border-l-4 ${getPriorityColor(email.priority)} ${
-                      email.status === "unread" ? "bg-blue-50/50" : ""
+                      email.status === "unread" ? "bg-green-50/50" : ""
                     }`}
                     onClick={() => setSelectedEmail(email)}
                   >
@@ -244,7 +244,7 @@ export function EmailInbox() {
                       <div className="flex items-center space-x-3 flex-1 min-w-0">
                         <div className="flex items-center space-x-2">
                           {getStatusIcon(email.aiStatus)}
-                          {email.status === "unread" && <div className="w-2 h-2 bg-ai-blue rounded-full" />}
+                          {email.status === "unread" && <div className="w-2 h-2 bg-ai-green rounded-full" />}
                         </div>
                         <div className="min-w-0 flex-1">
                           <div className="flex items-center justify-between">
@@ -298,7 +298,7 @@ export function EmailInbox() {
                             {email.aiStatus === "auto-archived" && "Auto-Archived"}
                           </span>
                         </div>
-                        <Badge className="bg-ai-blue">
+                        <Badge className="bg-ai-green">
                           <Globe className="mr-1 h-3 w-3" />
                           {email.language}
                         </Badge>

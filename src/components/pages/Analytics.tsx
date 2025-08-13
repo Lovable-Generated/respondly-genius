@@ -37,9 +37,9 @@ const emailVolumeData = [
 ];
 
 const languageData = [
-  { name: "English", value: 45, responses: 2150, satisfaction: 4.9, color: "#3b82f6" },
-  { name: "Norwegian", value: 32, responses: 1540, satisfaction: 4.8, color: "#8b5cf6" },
-  { name: "Swedish", value: 15, responses: 720, satisfaction: 4.7, color: "#06b6d4" },
+  { name: "English", value: 45, responses: 2150, satisfaction: 4.9, color: "#10b981" },
+  { name: "Norwegian", value: 32, responses: 1540, satisfaction: 4.8, color: "#16a34a" },
+  { name: "Swedish", value: 15, responses: 720, satisfaction: 4.7, color: "#059669" },
   { name: "Danish", value: 8, responses: 380, satisfaction: 4.6, color: "#10b981" },
 ];
 
@@ -63,7 +63,7 @@ const topicsData = [
 
 const satisfactionData = [
   { rating: "5 Stars", count: 1240, percentage: 72, fill: "#10b981" },
-  { rating: "4 Stars", count: 320, percentage: 18.5, fill: "#3b82f6" },
+  { rating: "4 Stars", count: 320, percentage: 18.5, fill: "#10b981" },
   { rating: "3 Stars", count: 98, percentage: 5.7, fill: "#f59e0b" },
   { rating: "2 Stars", count: 42, percentage: 2.4, fill: "#ef4444" },
   { rating: "1 Star", count: 23, percentage: 1.4, fill: "#dc2626" },
@@ -182,8 +182,8 @@ export function Analytics() {
                         type="monotone"
                         dataKey="emails"
                         stackId="1"
-                        stroke="#3b82f6"
-                        fill="#3b82f6"
+                        stroke="#10b981"
+                        fill="#10b981"
                         fillOpacity={0.6}
                         name="Emails Received"
                       />
@@ -191,8 +191,8 @@ export function Analytics() {
                         type="monotone"
                         dataKey="responses"
                         stackId="2"
-                        stroke="#8b5cf6"
-                        fill="#8b5cf6"
+                        stroke="#16a34a"
+                        fill="#16a34a"
                         fillOpacity={0.6}
                         name="AI Responses"
                       />
@@ -247,9 +247,9 @@ export function Analytics() {
                       <Line
                         type="monotone"
                         dataKey="avgTime"
-                        stroke="#3b82f6"
+                        stroke="#10b981"
                         strokeWidth={3}
-                        dot={{ fill: "#3b82f6", strokeWidth: 2, r: 4 }}
+                        dot={{ fill: "#10b981", strokeWidth: 2, r: 4 }}
                         name="Avg Response Time (s)"
                       />
                     </LineChart>
@@ -270,7 +270,7 @@ export function Analytics() {
                       <XAxis dataKey="hour" fontSize={12} />
                       <YAxis fontSize={12} />
                       <Tooltip />
-                      <Bar dataKey="volume" fill="#8b5cf6" name="Email Volume" />
+                      <Bar dataKey="volume" fill="#16a34a" name="Email Volume" />
                     </BarChart>
                   </ResponsiveContainer>
                 </CardContent>

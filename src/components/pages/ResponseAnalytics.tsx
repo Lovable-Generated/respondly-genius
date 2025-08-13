@@ -125,7 +125,7 @@ export function ResponseAnalytics() {
                     +1.2% from last week
                   </div>
                 </div>
-                <Target className="h-8 w-8 text-ai-blue" />
+                <Target className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -140,7 +140,7 @@ export function ResponseAnalytics() {
                     +0.1s from last week
                   </div>
                 </div>
-                <Clock className="h-8 w-8 text-ai-purple" />
+                <Clock className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -179,8 +179,8 @@ export function ResponseAnalytics() {
                   <Area
                     type="monotone"
                     dataKey="quality"
-                    stroke="#3b82f6"
-                    fill="#3b82f6"
+                    stroke="#10b981"
+                    fill="#10b981"
                     fillOpacity={0.6}
                     name="Quality Score"
                   />
@@ -205,9 +205,9 @@ export function ResponseAnalytics() {
                   <Line
                     type="monotone"
                     dataKey="avgTime"
-                    stroke="#8b5cf6"
+                    stroke="#16a34a"
                     strokeWidth={3}
-                    dot={{ fill: "#8b5cf6", strokeWidth: 2, r: 4 }}
+                    dot={{ fill: "#16a34a", strokeWidth: 2, r: 4 }}
                     name="Avg Response Time (s)"
                   />
                 </LineChart>
@@ -277,7 +277,7 @@ export function ResponseAnalytics() {
               {languagePerformance.map((lang, index) => (
                 <div key={index} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition-colors">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 bg-gradient-to-br from-ai-green to-ai-emerald rounded-lg flex items-center justify-center text-white font-bold">
                       {lang.language.slice(0, 2).toUpperCase()}
                     </div>
                     <div>
@@ -358,9 +358,9 @@ export function ResponseAnalytics() {
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              <div className="p-4 border-l-4 border-ai-blue bg-blue-50/50 rounded-lg">
-                <h4 className="font-medium text-blue-900">High Priority</h4>
-                <p className="text-sm text-blue-800 mt-1">
+              <div className="p-4 border-l-4 border-ai-green bg-green-50/50 rounded-lg">
+                <h4 className="font-medium text-green-900">High Priority</h4>
+                <p className="text-sm text-green-800 mt-1">
                   Improve context understanding for partnership inquiries. Consider adding more training data 
                   for business development scenarios.
                 </p>

@@ -59,7 +59,7 @@ export function AISettings() {
           <CardHeader>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-ai-blue to-ai-purple rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-ai-green to-ai-emerald rounded-lg flex items-center justify-center">
                   <Brain className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -83,11 +83,11 @@ export function AISettings() {
           <CardContent>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="text-center p-4 border rounded-lg">
-                <div className="text-2xl font-bold text-ai-blue">97.8%</div>
+                <div className="text-2xl font-bold text-ai-green">97.8%</div>
                 <p className="text-sm text-muted-foreground">Success Rate</p>
               </div>
               <div className="text-center p-4 border rounded-lg">
-                <div className="text-2xl font-bold text-ai-purple">1.24s</div>
+                <div className="text-2xl font-bold text-ai-emerald">1.24s</div>
                 <p className="text-sm text-muted-foreground">Avg Response Time</p>
               </div>
               <div className="text-center p-4 border rounded-lg">
@@ -234,7 +234,7 @@ export function AISettings() {
                       <div className="text-muted-foreground">Better quality responses</div>
                     </div>
                     <div className="p-3 border rounded-lg">
-                      <div className="font-medium text-blue-600">Low Confidence</div>
+                      <div className="font-medium text-green-600">Low Confidence</div>
                       <div className="text-muted-foreground">More automated responses</div>
                     </div>
                   </div>

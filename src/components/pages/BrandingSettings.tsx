@@ -35,10 +35,10 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const colorPresets = [
-  { name: "Ocean Blue", primary: "#0ea5e9", secondary: "#0284c7", accent: "#06b6d4" },
+  { name: "Ocean Blue", primary: "#14b8a6", secondary: "#0d9488", accent: "#059669" },
   { name: "Forest Green", primary: "#10b981", secondary: "#059669", accent: "#06d6a0" },
   { name: "Sunset Orange", primary: "#f59e0b", secondary: "#d97706", accent: "#fb923c" },
-  { name: "Royal Purple", primary: "#8b5cf6", secondary: "#7c3aed", accent: "#a855f7" },
+  { name: "Royal Purple", primary: "#16a34a", secondary: "#15803d", accent: "#4ade80" },
   { name: "Rose Pink", primary: "#ec4899", secondary: "#db2777", accent: "#f472b6" },
   { name: "Slate Gray", primary: "#64748b", secondary: "#475569", accent: "#94a3b8" }
 ];
@@ -130,7 +130,7 @@ export function BrandingSettings() {
                       <div 
                         key={index}
                         className={`p-3 border rounded-lg cursor-pointer transition-colors ${
-                          selectedColors.name === preset.name ? 'border-blue-500 bg-blue-50' : 'hover:bg-muted/50'
+                          selectedColors.name === preset.name ? 'border-green-500 bg-green-50' : 'hover:bg-muted/50'
                         }`}
                         onClick={() => handleColorPresetSelect(preset)}
                       >

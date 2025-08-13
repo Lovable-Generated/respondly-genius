@@ -28,9 +28,9 @@ const usageOverTime = [
 ];
 
 const usageByFeature = [
-  { feature: "Email Processing", usage: 65, cost: 245, color: "#3b82f6" },
-  { feature: "AI Responses", usage: 25, cost: 89, color: "#8b5cf6" },
-  { feature: "Templates", usage: 6, cost: 23, color: "#06b6d4" },
+  { feature: "Email Processing", usage: 65, cost: 245, color: "#10b981" },
+  { feature: "AI Responses", usage: 25, cost: 89, color: "#16a34a" },
+  { feature: "Templates", usage: 6, cost: 23, color: "#059669" },
   { feature: "Analytics", usage: 3, cost: 12, color: "#10b981" },
   { feature: "API Calls", usage: 1, cost: 4, color: "#f59e0b" }
 ];
@@ -109,7 +109,7 @@ export function UsageReports() {
                     +15% vs last period
                   </div>
                 </div>
-                <Mail className="h-8 w-8 text-ai-blue" />
+                <Mail className="h-8 w-8 text-ai-green" />
               </div>
             </CardContent>
           </Card>
@@ -124,7 +124,7 @@ export function UsageReports() {
                     +12% vs last period
                   </div>
                 </div>
-                <Zap className="h-8 w-8 text-ai-purple" />
+                <Zap className="h-8 w-8 text-ai-emerald" />
               </div>
             </CardContent>
           </Card>
@@ -188,8 +188,8 @@ export function UsageReports() {
                       <Area
                         type="monotone"
                         dataKey="emails"
-                        stroke="#3b82f6"
-                        fill="#3b82f6"
+                        stroke="#10b981"
+                        fill="#10b981"
                         fillOpacity={0.6}
                         name="Emails Processed"
                       />
@@ -240,7 +240,7 @@ export function UsageReports() {
                     <XAxis dataKey="hour" fontSize={12} />
                     <YAxis fontSize={12} />
                     <Tooltip />
-                    <Bar dataKey="emails" fill="#8b5cf6" name="Emails" />
+                    <Bar dataKey="emails" fill="#16a34a" name="Emails" />
                   </BarChart>
                 </ResponsiveContainer>
               </CardContent>
@@ -329,7 +329,7 @@ export function UsageReports() {
                   {usageByTeamMember.map((member, index) => (
                     <div key={index} className="flex items-center justify-between p-4 border rounded-lg hover:bg-muted/50 transition-colors">
                       <div className="flex items-center space-x-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-ai-blue to-ai-purple rounded-full flex items-center justify-center text-white font-bold">
+                        <div className="w-12 h-12 bg-gradient-to-br from-ai-green to-ai-emerald rounded-full flex items-center justify-center text-white font-bold">
                           {member.name.split(' ').map(n => n[0]).join('')}
                         </div>
                         <div>
@@ -379,17 +379,17 @@ export function UsageReports() {
                     <Line
                       type="monotone"
                       dataKey="emails"
-                      stroke="#3b82f6"
+                      stroke="#10b981"
                       strokeWidth={3}
-                      dot={{ fill: "#3b82f6", strokeWidth: 2, r: 4 }}
+                      dot={{ fill: "#10b981", strokeWidth: 2, r: 4 }}
                       name="Emails Processed"
                     />
                     <Line
                       type="monotone"
                       dataKey="apiCalls"
-                      stroke="#8b5cf6"
+                      stroke="#16a34a"
                       strokeWidth={2}
-                      dot={{ fill: "#8b5cf6", strokeWidth: 2, r: 3 }}
+                      dot={{ fill: "#16a34a", strokeWidth: 2, r: 3 }}
                       name="API Calls"
                     />
                   </LineChart>
@@ -410,7 +410,7 @@ export function UsageReports() {
               <Card>
                 <CardContent className="p-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">+19%</div>
+                    <div className="text-2xl font-bold text-green-600">+19%</div>
                     <div className="text-sm text-muted-foreground">API Usage Growth (MoM)</div>
                   </div>
                 </CardContent>
@@ -418,7 +418,7 @@ export function UsageReports() {
               <Card>
                 <CardContent className="p-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">+15%</div>
+                    <div className="text-2xl font-bold text-emerald-600">+15%</div>
                     <div className="text-sm text-muted-foreground">Storage Growth (MoM)</div>
                   </div>
                 </CardContent>
